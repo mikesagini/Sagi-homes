@@ -5,6 +5,7 @@ import streamlit as st
 # Make sure to add "openai_api_key" to your .streamlit/secrets.toml file like:
 # [general]
 # openai_api_key = "your-openai-api-key"
+openai.api_key = st.secrets["openai"]["api_key"]
 if not openai.api_key:
     st.error("OpenAI API key not found. Please add it to .streamlit/secrets.toml.")
 st.title("Sagini Estate Listing Generator")
